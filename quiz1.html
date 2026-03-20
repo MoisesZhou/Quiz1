@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz de Linguagem de programação</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <!-- src="quiz.js" -->
+  <script>
+    var tempo = 0;
+    var pontos = 0;
+    parseInt(pontos)
+    function alternativa(numero) {
+      switch (numero) {
+        case 1:
+          alert("Resposta Certa")
+          pontos = pontos + 1
+          break
+        default:
+          alert("Resposta errada!!!")
+      }
+      sessionStorage.setItem('varPontos', pontos);
+      window.location.href = "quiz2.html"
+    }
+    function formatarTempo(tempo) {
+      let horas = Math.floor(tempo / 3600);
+      let minutos = Math.floor((tempo % 3600) / 60);
+      let segundos = tempo % 60;
+      return `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+    }
+    formatarTempo(tempo)
+    intervalo = setInterval(() => {
+      tempo++;
+      document.getElementById('display').innerText = formatarTempo(tempo);
+    }, 1000); // Atualiza a cada 1 segundo [2]
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Quiz sobre linguagens de programção.</h1>
+  </header>
+
+  <div class="container">
+    <div class="quiz">
+      <div id="pergunta">
+        <h3>
+          1. Qual das seguintes linguagens de programação é predominantemente
+          conhecida por ser interpretada e amplamente utilizada para adicionar
+          interatividade em páginas web no lado do cliente?
+        </h3>
+      </div>
+      <div id="alternativas">
+        <button type="button" id="opcaoA1" onclick="alternativa(0)">A) Java</button>
+        <button type="button" id="opcaoB1" onclick="alternativa(1)">B) JavaScript</button>
+        <button type="button" id="opcaoC1" onclick="alternativa(0)">C) C++</button>
+        <button type="button" id="opcaoD1" onclick="alternativa(0)">D) C</button>
+      </div>
+      <span id="display">00:00:00</span>
+    </div>
+  </div>
+
+  <footer>
+    <h1>Criado por Moisés Zhou.</h1>
+  </footer>
+</body>
+
+</html>

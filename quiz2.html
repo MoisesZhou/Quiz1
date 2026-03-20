@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz de Linguagem de programação</title>
+  <link rel="stylesheet" href="estilo.css" />
+  <!-- src="quiz.js" -->
+  <script>
+var pontos = parseInt(sessionStorage.getItem('varPontos'))
+    function alternativa(numero) {
+      switch(numero){
+        case 1:
+          alert("Resposta Certo!");
+           pontos = pontos + 1
+      document.getElementById("opcaoB1").style.backgroundColor = "green";
+      break
+      
+        default:
+          alert("Resposta Errado")
+      }
+      // if (numero == 3) {
+      //   alert("Resposta Certo!");
+      //   document.getElementById("opcaoC1").style.backgroundColor = "green";
+      // } else if (numero == 1) {
+      //   alert("Resposta Errada!");
+      //   document.getElementById("opcaoA1").innerHTML = "Incorreto";
+      //   document.getElementById("opcaoA1").style.backgroundColor = "red";
+      // } else if (numero == 2) {
+      //   alert("Resposta Errada!");
+      //   document.getElementById("opcaoB1").innerHTML = "Incorreto";
+      //   document.getElementById("opcaoB1").style.backgroundColor = "red";
+      // } else if (numero == 4) {
+      //   alert("Resposta Errada!");
+      //   document.getElementById("opcaoD1").innerHTML = "Incorreto";
+      //   document.getElementById("opcaoD1").style.backgroundColor = "red";
+      // }
+      sessionStorage.setItem('varPontos', pontos);
+      window.location.href = "quiz3.html";
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Quiz sobre linguagens de programção.</h1>
+  </header>
+
+  <div class="container">
+    <div class="quiz">
+      <div id="pergunta">
+        <h3>
+          2. Qual é o conceito central da Programação Orientada a Objetos (POO) que permite que uma classe adquira
+          propriedades e métodos de outra classe existente?
+        </h3>
+      </div>
+      <div id="alternativas">
+        <button type="button" id="opcaoA1" onclick="alternativa(0)">A) Polimorfismo</button>
+        <button type="button" id="opcaoB1" onclick="alternativa(0)">B) Encapsulamento</button>
+        <button type="button" id="opcaoC1" onclick="alternativa(1)">C) Herança</button>
+        <button type="button" id="opcaoD1" onclick="alternativa(0)">D) Abstração</button>
+      </div>
+            <span id="display">00:00:00</span>
+
+    </div>
+  </div>
+  <footer>
+    <h1>Criado por Moisés Zhou.</h1>
+  </footer>
+</body>
+
+</html>

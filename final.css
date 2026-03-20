@@ -1,0 +1,51 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body{
+      font-family: Sans-Serif;
+
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh; /* <-- É essa linha que faz a mágica da centralização vertical! */
+  background-color: rgb(39, 43, 107);
+}
+.quiz {
+  height: 400px;
+  width: 300px;
+  background-color: rgb(32, 102, 168);
+  color: aliceblue;
+  border: solid black 8px;
+  border-radius: 50px;
+  box-shadow: -25px 35px 8px 8px #00000096;
+}
+h1{
+    margin-left: 25px;
+}
+button{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  color: aliceblue;
+  background-color: rgb(0, 112, 218);
+  border: solid rgb(0, 132, 255);
+  border-radius: 20px;
+  width: 200px;
+  margin-top: 40px;
+  margin-left: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 50px;
+  box-shadow: -15px 10px 8px 8px rgba(0, 0, 0, 0.547);
+}
+header{
+    background-color: rgb(42, 49, 146);
+    color: rgb(28, 94, 151);
+    text-align: center;
+}
+footer{
+    background-color: rgb(42, 49, 146);
+    color: rgb(28, 94, 151);
+ }
+

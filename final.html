@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado</title>
+  <link rel="stylesheet" href="final.css">
+</head>
+
+
+<body>
+  <header>
+    <h1>Quiz sobre linguagens de programção.</h1>
+  </header>
+
+  <div class="container">
+    <div class="quiz">
+    <div  id="total"></div>
+      <button onclick="voltar()">Voltar</button>
+    </div>
+  </div>
+  <footer>
+    <h1>Criado por Moisés Zhou.</h1>
+  </footer>
+  
+</body>
+<script>
+      var pontos = sessionStorage.getItem('varPontos')
+
+  function voltar() {
+    window.location.href = "quiz1.html";
+  }
+  var pontos =sessionStorage.getItem('varPontos')
+  document.getElementById("total").innerHTML = "<h1>Você fez "+ pontos +"/7</h1>";
+</script>
+</html>
